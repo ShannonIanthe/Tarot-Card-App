@@ -150,6 +150,9 @@ h1 {
 
 /* Media Query */
 @media screen and (max-width: 480px) {
+  body{
+    max-height: 100vh;
+  }
     h1{
         font-size: 1.4rem;
     }
