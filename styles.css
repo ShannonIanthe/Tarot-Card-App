@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  display: inline-block;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 0.6rem;
+}
+
+img {
+  max-width: 2rem;
+  max-height: 2rem;
+  cursor: pointer;
+}
+
+/* Navigation Bar*/
+a,
+button {
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  width: 250px;
+  font-family: "Aboreto", cursive;
+}
+
+.navigation {
+  position: fixed;
+  right: -500px;
+  width: 350px;
+  height: 100%;
+  background-color: #000;
+  transition: 0.5s;
+}
+
+.navigation ul li {
+  color: #fff;
+  text-align: right;
+  text-transform: uppercase;
+  list-style-type: none;
+  font-size: 1.5em;
+  padding: 20px 30px;
+  border-bottom: 1pt solid #252525; /* if i want to remove the lines under each nav item */
+}
+
+.hamburger,
+.bar {
+  position: fixed;
+}
+.hamburger {
+  display: block;
+  top: 7%;
+  left: 95%;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  border: 0;
+  background: 0 0;
+}
+
+.bar {
+  top: 3px;
+  background: #000;
+  width: 100%;
+  height: 2px;
+  transition: all 0.3s ease-in;
+}
+
+#bar2 {
+  top: 11px;
+}
+#bar3 {
+  top: 19px;
+}
+
+.navigation.active {
+  right: 0;
+}
+
+.hamburger.open #bar1 {
+  background-color: #fff;
+  transform: rotate(45deg) translate(6px, 5px);
+}
+.hamburger.open #bar2 {
+  background-color: transparent;
+}
+.hamburger.open #bar3 {
+  background-color: #fff;
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
+  max-height: 100vh;
+}
+
+h1 {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Aboreto", cursive;
+  text-align: center;
+}
+
+/* card */
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.p-title{
+    font-family: "Aboreto", cursive;
+}
+
+/* button */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Aboreto", cursive;
+  padding: 7px;
+  background-color: rgb(50, 50, 50);
+  border: none;
+  color: rgb(227, 219, 219);
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+/* Media Query */
+@media screen and (max-width: 480px) {
+    h1{
+        font-size: 1.4rem;
+    }
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .hamburger{
+        left: 85%;
+    }
+}
